@@ -37,6 +37,11 @@ namespace WorkingWithFilesAPI.Controllers
         [HttpPost]
         public IActionResult WriteLine([FromBody] FileRequestDto request)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var fileModel = _mapperService.Map(request);
             var result = _fileService.WriteLine(fileModel);
             return Created();
@@ -45,6 +50,11 @@ namespace WorkingWithFilesAPI.Controllers
         [HttpPut]
         public IActionResult ReplaceLine([FromBody] FileRequestDto request)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var fileModel = _mapperService.Map(request);
             var result = _fileService.ReplaceLine(fileModel);
             return NoContent();
@@ -53,6 +63,11 @@ namespace WorkingWithFilesAPI.Controllers
         [HttpDelete]
         public IActionResult RemoveLine([FromBody] FileRequestDto request)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var fileModel = _mapperService.Map(request);
             var result = _fileService.RemoveLine(fileModel);
             return NoContent();
