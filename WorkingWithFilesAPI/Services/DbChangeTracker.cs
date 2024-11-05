@@ -28,7 +28,7 @@ namespace WorkingWithFilesAPI.Services
         public List<ChangeRecord> GetChanges(DateTime from, DateTime to)
         {
             return _changes
-                .Where(d => d.CreatedAt >= from && d.CreatedAt <= to)
+                .Where(d => d.ChangeTime >= from && d.ChangeTime <= to)
                 .ToList();
         }
         public void ClearChanges()

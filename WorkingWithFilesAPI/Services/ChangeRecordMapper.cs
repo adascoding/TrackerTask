@@ -9,9 +9,11 @@ namespace WorkingWithFilesAPI.Services
         {
             return new ChangeRecord
             {
+                EntityName = dto.EntityName,
                 Type = dto.Type,
-                Description = dto.Description,
-                CreatedAt = dto.CreatedAt
+                OldValue = dto.OldValue,
+                NewValue = dto.NewValue,
+                ChangeTime = dto.ChangeTime
             };
         }
 
@@ -19,16 +21,20 @@ namespace WorkingWithFilesAPI.Services
         {
             return new ChangeRecordDto
             {
+                EntityName = model.EntityName,
                 Type = model.Type,
-                Description = model.Description,
-                CreatedAt = model.CreatedAt
+                OldValue = model.OldValue,
+                NewValue = model.NewValue,
+                ChangeTime = model.ChangeTime
             };
         }
-        public void UpdateModelFromDto(ChangeRecordDto dto, ChangeRecord model)
+        public void Project(ChangeRecordDto dto, ChangeRecord model)
         {
+            model.EntityName = dto.EntityName;
             model.Type = dto.Type;
-            model.Description = dto.Description;
-            model.CreatedAt = dto.CreatedAt;
+            model.OldValue = dto.OldValue;
+            model.NewValue = dto.NewValue;
+            model.ChangeTime = dto.ChangeTime;
         }
     }
 }

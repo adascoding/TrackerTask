@@ -11,6 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="change_logs.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="tekstas.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -2,8 +2,8 @@
 {
     public enum ChangeType
     {
-        Addition = 0,
-        Update = 1,
-        Deletion = 2
+        Added = 0,
+        Deleted = 1,
+        Updated = 2
     }
 }

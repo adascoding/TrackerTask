@@ -7,6 +7,6 @@ namespace WorkingWithFilesAPI.Services
     {
         ChangeRecord MapToModel(ChangeRecordDto dto);
         ChangeRecordDto MapToDto(ChangeRecord model);
-        void UpdateModelFromDto(ChangeRecordDto dto, ChangeRecord model);
+        void Project(ChangeRecordDto dto, ChangeRecord model);
     }
 }

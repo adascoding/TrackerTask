@@ -68,7 +68,7 @@ namespace WorkingWithFilesAPI.Controllers
             if (changeRecord == null)
                 return NotFound();
 
-            _changeRecordMapper.UpdateModelFromDto(changeDto, changeRecord);
+            _changeRecordMapper.Project(changeDto, changeRecord);
             _dbChangeTracker.UpdateChange(changeRecord);
 
             return NoContent();
