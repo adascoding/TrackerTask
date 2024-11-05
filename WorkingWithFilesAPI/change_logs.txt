@@ -1,1 +1,2 @@
 75f74b75-d8b7-40d5-8f07-c1a4e03fbfb9, Modelis 1, Added, old, new, 2024-11-05 18:11:05
+877b8e0a-b4d1-439b-bc86-0a015ab50c16, Class, Updated, sena reiksme, nauja reiksme, 2024-11-06 18:37:30
